@@ -1,0 +1,400 @@
+*,*::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    width: 100%;
+    height: 100vh;
+    font-family: 'Mukta', sans-serif;
+}
+
+/* HEADER ========================*** */
+
+.logo {
+    width: 100px;
+}
+
+header {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 180px;
+
+    width: 100%;
+}
+.menu {
+    max-width: 1140px;
+    display: flex;
+    align-items: center;
+}
+
+.menu__ul {
+
+    display: flex;
+    
+}
+
+.menu__links {
+
+    display: block;
+
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 200;
+    
+
+    margin-left: 24px;
+    color: grey;
+
+    position: relative;
+}
+
+.menu__links::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+
+    width: 2px;
+    height: 0px;
+    transition: .7s ease;
+
+    background: red;
+
+}
+
+.menu__links:hover {
+
+    color: white;
+}
+
+.menu__links:hover::after{
+
+    height: 40px;
+}
+
+li, a {
+    list-style: none;
+    text-decoration: none;
+
+}
+
+li a:first-of-type{
+    margin-left: 30px;
+}
+.redes-sociais__icones {
+    width: 24px;
+}
+.redes-sociais__icones path{
+
+    margin-left: 10px;
+    cursor: pointer;
+    transition: .7s ease;
+}
+
+.redes-sociais__icones circle {
+    margin-left: 10px;
+    cursor: pointer;
+    transition: .7s ease;
+}
+
+.redes-sociais__icones:hover circle {
+    fill: #F02A2F ;
+    transform: translate3d(0,-4px,0);
+    cursor: pointer;
+}
+
+.redes-sociais__icones:hover path {
+
+    fill: #F02A2F;
+    transform: translate3d(0,-4px,0);
+    cursor: pointer;
+}
+
+
+/* MAIN ==========================*** */
+
+p {
+
+    font-size: 16px;
+    color: gray;
+    letter-spacing: 1px;
+    line-height: 140%;
+}
+
+.container {
+
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0px 16px;
+    overflow: hidden;
+
+
+    display: flex;
+    align-items: center;
+}
+
+
+.informacoes {
+
+    max-width: 580px;
+}
+
+.homem-aranha {
+
+    width: 140%;
+    overflow: hidden;
+    transform: translate3d(-170px,0,0);
+}
+
+/* BOTÕES DAS INFORMAÇÕES ============================== */
+
+.informacoes__botao1 {
+
+    display: inline-block;
+    background: linear-gradient(267.72deg, #F02A2F 0.88%, red 100%);
+    border: none;
+    border-radius: 3px;
+
+    padding: 12px 32px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+
+    transform: skewX(-10deg);
+    transition: .7s ease;
+    
+    position: relative;
+}
+
+.informacoes__botao1::after {
+
+    content: '';
+    position: absolute;
+    display: block;
+    top: -2px;
+    left: -2px;
+
+    border-radius: 3px;
+    opacity: 0;
+
+    width: 20%;
+    height: 70%;
+    z-index: -1;
+
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+
+    transition: .7s ease;
+
+}
+
+.informacoes__botao1::before {
+
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: -2px;
+    right: -2px;
+
+    border-radius: 3px;
+    opacity: 0;
+
+    width: 20%;
+    height: 70%;
+    z-index: -1;
+
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+
+    transition: .7s ease;
+}
+
+.informacoes__botao1:hover {
+
+    box-shadow: 0px 14px 85px rgba(240, 42, 47, 0.06), 
+        0px 5.11023px 31.0264px rgba(240, 42, 47, 0.0413989), 
+        0px 2.48092px 15.0627px rgba(240, 42, 47, 0.0333774), 
+        0px 1.21619px 7.38404px rgba(240, 42, 47, 0.0266226), 
+        0px 0.480885px 2.91966px rgba(240, 42, 47, 0.0186011);
+
+        transform: scale(1.05) skewX(-10deg);
+        cursor: pointer;
+}
+
+.informacoes__botao1:hover::after {
+
+
+    opacity: 1;
+    top: -2px;
+    left: -2px;
+}
+
+.informacoes__botao1:hover::before {
+
+    opacity: 1;
+    bottom: -2px;
+    right: -2px;
+}
+
+.informacoes__botao2 {
+
+    display: inline-block;
+    background: transparent;
+    border-radius: 3px;
+    border: 2px solid red;
+
+    padding: 10px 32px;
+    margin-left: 15px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+
+    transform: skewX(-10deg);
+    transition: .7s ease;
+
+    overflow: hidden;
+    z-index: 700;
+    
+    position: relative;
+
+}
+
+.informacoes__botao2::after {
+
+    content: '';
+        position: absolute;
+        display: block;
+        top: 0;
+        left: -5px;
+        
+        background: linear-gradient(267.72deg, #F02A2F 0.88%, red 100%);
+        border-radius: 3px;
+
+        width: 0%;
+        height: 110%;
+        z-index: -1;
+
+        transition: .7s ease;
+}
+
+.informacoes__botao2:hover::after {
+
+    opacity: 1;
+    width: 120%;
+}
+
+.informacoes__botao2:hover {
+
+    box-shadow: 0px 14px 85px rgba(240, 42, 47, 0.06), 
+        0px 5.11023px 31.0264px rgba(240, 42, 47, 0.0413989), 
+        0px 2.48092px 15.0627px rgba(240, 42, 47, 0.0333774), 
+        0px 1.21619px 7.38404px rgba(240, 42, 47, 0.0266226), 
+        0px 0.480885px 2.91966px rgba(240, 42, 47, 0.0186011);
+
+        transform: scale(1.05) skewX(-10deg);
+
+        cursor: pointer;
+}
+
+.informacoes__icones-play {
+
+    margin-right: 16px;
+}
+
+.informacoes p {
+
+    font-size: 14px;
+    color: #959698;
+    letter-spacing: 1px;
+
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+/* BG VIDEO =============*** */
+
+.bg-video {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-video::after {
+
+    content: '';
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+
+    background: linear-gradient(90deg, #0B0C10 35.03%, rgba(11, 12, 16, 0.8) 53.44%, #0C0C10 75.44%);
+}
+
+/* LOADING =============*** */
+
+.bg-loading {
+
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: linear-gradient(225deg, red 0%, darkred 100%);
+}
+
+.logo-spiderman {
+
+    fill: transparent;
+
+    animation: logo-spiderman 12s ease infinite alternate;
+}
+
+@keyframes logo-spiderman {
+    0%{
+        stroke-width: 0 ;
+        stroke-dasharray: 1 100;
+        fill: transparent;
+    }
+    25% {
+
+        stroke-width: 1;
+        fill: transparent;
+        stroke-dasharray: 100 0;
+    }
+    60%,100%{
+        stroke-width: 0.3;
+        fill: whitesmoke;
+    }
+}
